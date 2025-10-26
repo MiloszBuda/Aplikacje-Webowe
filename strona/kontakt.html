@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kontakt</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <header class="head">
+      <h1 class="alfa-slab-one-regular" style="font-size: 40px">Kontakt</h1>
+      <nav>
+        <a class="roboto-uniquifier" href="home.html">Home</a>
+        <a class="roboto-uniquifier" href="galeria.html">Galeria</a>
+        <a class="roboto-uniquifier" href="kontakt.html">Kontakt</a>
+      </nav>
+    </header>
+
+    <div class="formularz">
+      <header><h3>Formularz Kontaktowy</h3></header>
+      <main>
+        <form>
+          <label for="name">Imię:</label><br />
+          <input
+            type="text"
+            id="name"
+            name="name"
+            placeholder="Imię"
+          /><br /><br />
+
+          <label for="email">Email:</label><br />
+          <input
+            type="text"
+            id="email"
+            name="email"
+            placeholder="przyklad@email.com"
+          /><br /><br />
+
+          <label for="subject">Temat:</label><br />
+          <select id="subject" name="subject">
+            <option value="general">Ogólne zapytanie</option>
+            <option value="support">Wsparcie techniczne</option>
+            <option value="feedback">Opinie i sugestie</option></select
+          ><br /><br />
+
+          <label for="message">Wiadomość:</label><br />
+          <textarea
+            id="message"
+            name="message"
+            rows="4"
+            cols="50"
+            placeholder="Wiadomość"
+          ></textarea
+          ><br /><br />
+
+          <input type="submit" value="Wyślij" />
+        </form>
+      </main>
+    </div>
+
+    <footer>
+      <p>Miłosz Buda</p>
+    </footer>
+  </body>
+</html>
