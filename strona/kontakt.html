@@ -1,59 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Kontakt</title>
-    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="./main.css" />
+    <link rel="stylesheet" href="./kontakt.css" />
+    <script src="./script.js"></script>
   </head>
-  <body>
+  <body onload="startTime()">
     <header class="head">
-      <h1 class="alfa-slab-one-regular" style="font-size: 40px">Kontakt</h1>
-      <nav>
-        <a class="roboto-uniquifier" href="home.html">Home</a>
-        <a class="roboto-uniquifier" href="galeria.html">Galeria</a>
-        <a class="roboto-uniquifier" href="kontakt.html">Kontakt</a>
-      </nav>
+      <h1 class="alfa-slab-one-regular">Kontakt</h1>
+      <div class="page">
+        <div id="clock" class="clock"></div>
+        <nav>
+          <a href="home.html">Home</a>
+          <a href="galeria.html">Galeria</a>
+          <a class="active" href="kontakt.html">Kontakt</a>
+        </nav>
+      </div>
     </header>
 
-    <div class="formularz">
+    <div class="formularz" id="formularz">
       <header><h3>Formularz Kontaktowy</h3></header>
       <main>
         <form>
-          <label for="name">Imię:</label><br />
-          <input
-            type="text"
-            id="name"
-            name="name"
-            placeholder="Imię"
-          /><br /><br />
+          <div class="form-row">
+            <div class="form-group">
+              <label for="name"> Imię i Nazwisko</label>
+              <input
+                type="text"
+                id="name"
+                name="name"
+                placeholder="Jan Kowalski"
+              />
+              <span id="error-name" class="err"></span>
+            </div>
 
-          <label for="email">Email:</label><br />
-          <input
-            type="text"
-            id="email"
-            name="email"
-            placeholder="przyklad@email.com"
-          /><br /><br />
+            <div class="form-group">
+              <label for="email">Email:</label>
+              <input
+                type="text"
+                id="email"
+                name="email"
+                placeholder="przyklad@email.com"
+              />
+              <span id="error-email" class="err"></span>
+            </div>
+          </div>
 
-          <label for="subject">Temat:</label><br />
+          <label for="subject">Temat:</label>
           <select id="subject" name="subject">
             <option value="general">Ogólne zapytanie</option>
-            <option value="support">Wsparcie techniczne</option>
+            <option value="support">Pomoc w wyborze betonu</option>
             <option value="feedback">Opinie i sugestie</option></select
-          ><br /><br />
+          ><br />
 
-          <label for="message">Wiadomość:</label><br />
-          <textarea
-            id="message"
-            name="message"
-            rows="4"
-            cols="50"
-            placeholder="Wiadomość"
-          ></textarea
-          ><br /><br />
-
-          <input type="submit" value="Wyślij" />
+          <div class="form-group">
+            <label for="message">Wiadomość:</label>
+            <textarea
+              id="message"
+              name="message"
+              placeholder="Twoja wiadomość..."
+            ></textarea>
+            <span id="error-message" class="err"></span>
+          </div>
+          <input type="submit" id="submitBtn" value="Wyślij" />
         </form>
       </main>
     </div>
@@ -61,5 +74,7 @@
     <footer>
       <p>Miłosz Buda</p>
     </footer>
+    <script src="kontakt.js"></script>
+    <script src="./clock.js"></script>
   </body>
 </html>

@@ -4,20 +4,62 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Galeria</title>
-    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="./main.css" />
+    <link rel="stylesheet" href="./galeria.css" />
   </head>
-  <body>
+  <body onload="startTime()">
     <header class="head">
-      <h1 class="alfa-slab-one-regular" style="font-size: 40px">Galeria</h1>
-      <nav>
-        <a class="roboto-uniquifier" href="home.html">Home</a>
-        <a class="roboto-uniquifier" href="galeria.html">Galeria</a>
-        <a class="roboto-uniquifier" href="kontakt.html">Kontakt</a>
-      </nav>
+      <h1 class="alfa-slab-one-regular">Galeria</h1>
+      <div class="page">
+        <div class="clock" id="clock"></div>
+        <nav>
+          <a href="home.html">Home</a>
+          <a class="active" href="galeria.html">Galeria</a>
+          <a href="kontakt.html">Kontakt</a>
+        </nav>
+      </div>
     </header>
+
+    <main>
+      <header class="galhed">
+        <h2>Zdjęcia różnych rodzajów betonu</h2>
+        <p>Kliknij na zdjęcie, aby je powiększyć.</p>
+      </header>
+      <div class="gallery">
+        <img src="beton1.jpg" alt="Betonowy kloc" />
+        <img src="beton2.jpg" alt="Wylewanie betonu" />
+        <img src="lekki1.png" alt="Lekki beton" />
+        <img src="lekki2.png" alt="Lekki beton" />
+        <img src="zbrojony1.jpg" alt="Zbrojony beton" />
+        <img src="zbrojony2.jpg" alt="Zbrojony beton" />
+      </div>
+
+      <header
+        class="galhed"
+        style="
+          border-top: rgb(208, 208, 208) 5px outset;
+          border-radius: 30px;
+          padding-bottom: 60px;
+        "
+      >
+        <h2>Proces produkcji betonu</h2>
+      </header>
+      <div class="vid">
+        <video controls>
+          <source src="betonvid.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+      </div>
+    </main>
 
     <footer>
       <p>Miłosz Buda</p>
     </footer>
+
+    <div id="lightbox">
+      <img src="" alt="" />
+    </div>
+    <script src="./clock.js"></script>
+    <script src="./galeria.js"></script>
   </body>
 </html>

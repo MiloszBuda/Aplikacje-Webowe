@@ -1,42 +1,108 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <link rel="stylesheet" href="./style.css" />
+    <link rel="stylesheet" href="./main.css" />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Strona Główna</title>
   </head>
-  <body>
-    <header class="head">
-      <h1 class="alfa-slab-one-regular" style="font-size: 40px">
-        Strona Główna
-      </h1>
 
-      <nav>
-        <a class="roboto-uniquifier" href="home.html">Home</a>
-        <a class="roboto-uniquifier" href="galeria.html">Galeria</a>
-        <a class="roboto-uniquifier" href="kontakt.html">Kontakt</a>
-      </nav>
+  <body onload="startTime()">
+    <header class="head">
+      <h1 class="alfa-slab-one-regular">Strona Główna</h1>
+      <div class="page">
+        <div class="clock" id="clock"></div>
+        <nav>
+          <a class="active" href="home.html">Home</a>
+          <a href="galeria.html">Galeria</a>
+          <a href="kontakt.html">Kontakt</a>
+        </nav>
+      </div>
     </header>
 
-    <div class="wrapper">
-      <header class="header">Header</header>
-      <article class="main">
-        <p>
-          Pellentesque habitant morbi tristique senectus et netus et malesuada
-          fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae,
-          ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam
-          egestas semper. Aenean ultricies mi vitae est. Mauris placerat
-          eleifend leo.
-        </p>
-      </article>
-      <aside class="aside aside-1">Aside 1</aside>
-      <aside class="aside aside-2">Aside 2</aside>
-      <footer class="footer">Footer</footer>
-    </div>
+    <main>
+      <div class="intro">
+        <img class="photo" src="Nationaly_Theatre.jpg" />
+        <div class="rowC">
+          <div style="font-size: 60px; padding: 10px">BETON</div>
+          <div style="font-size: 30px">- trwałość, surowość</div>
+        </div>
+      </div>
+
+      <section class="sekc">
+        <button class="collapse">
+          <header><h2>Czym jest beton?</h2></header>
+        </button>
+        <div class="content">
+          <p>
+            Beton to jeden z najczęściej używanych materiałów budowlanych. Powstaje
+            z połączenia cementu, wody i kruszywa, tworząc niezwykle trwałą
+            strukturę.
+          </p>
+        </div>
+      </section>
+
+      <section class="sekc">
+        <button class="collapse">
+          <header><h2>Rodzaje betonu</h2></header>
+        </button>
+        <div class="content">
+          <div class="row">
+            <article class="x">
+              <h4>Beton architektoniczny</h4>
+              <p>
+                Estetyczny i gładki, wykorzystywany w nowoczesnych budynkach. W jego strukturze można 
+                zauważyć przebarwienia i smugi, podkreślające organiczne pochodzenie oraz szlachetną formę.
+              </p>
+            </article>
+            <article class="x">
+              <h4>Beton zbrojony</h4>
+              <p>
+                Składający się z betonu wzmocnionego stalowymi prętami zbrojeniowymi lub jednym elementem stalowym.
+                Wzmacniany stalowymi prętami, stosowany w konstrukcjach narażonych na duże obciążenia.
+              </p>
+            </article>
+            <article class="x">
+              <h4>Beton lekki</h4>
+              <p>
+                Zawiera lekkie kruszywo, co zmniejsza jego wagę i poprawia
+                izolacyjność termiczną. Stosowany tam, gdzie liczy się mniejsza masa konstrukcji.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="sekc">
+        <button class="collapse">
+          <header><h2>Beton a cement</h2></header>
+        </button>
+        <div class="content">
+          <p>
+            Cement jest składnikiem betonu, ale sam w sobie nie jest betonem.
+            Beton to mieszanina cementu, wody i kruszywa.
+          </p>
+        </div>
+      </section>
+
+      <section class="sekc">
+        <button class="collapse">
+          <header><h2>Ciekawostki</h2></header>
+        </button>
+        <div class="content">
+          <ul style="margin-top: 0">
+            <li>Najstarsze konstrukcje betonowe mają ponad 2000 lat.</li>
+            <li>Istnieje beton, który sam naprawia mikropęknięcia.</li>
+            <li>Największy wylew betonu trwał 18 godzin.</li>
+          </ul>
+        </div>
+
+    </main>
 
     <footer>
       <p>Miłosz Buda</p>
     </footer>
+    <script src="./clock.js"></script>
+    <script src="./collapse.js"></script>
   </body>
 </html>

@@ -1,0 +1,143 @@
+.formularz {
+  display: flex;
+  flex-flow: column wrap;
+  align-items: stretch;
+  justify-content: center;
+
+  margin: auto;
+  margin-top: 30px;
+  box-shadow: 0 0 10px 1px rgba(129, 129, 129, 0.3);
+  border-radius: 20px;
+  background-color: white;
+  max-width: 700px;
+  width: 100%;
+  padding: 30px;
+  box-sizing: border-box;
+}
+
+.formularz header {
+  text-align: center;
+  width: 100%;
+  border-bottom: 1px solid gray;
+  margin-bottom: 10px;
+}
+
+.formularz form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+}
+
+.formularz label {
+  font-size: 13px;
+  font-weight: normal;
+  margin: 10px 5px 0 5px;
+  text-align: left;
+}
+
+.formularz input,
+.formularz select,
+.formularz textarea {
+  margin: 5px;
+  padding: 5px;
+  border-radius: 5px;
+  border: 1px solid gray;
+  font-size: 15px;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+.formularz input {
+  height: 40px;
+}
+
+.formularz select {
+  height: 40px;
+}
+
+.formularz textarea {
+  min-height: 200px;
+  resize: vertical;
+}
+
+.formularz input[type="submit"] {
+  margin: 30px 5px 0 5px;
+  padding: 10px 20px;
+  border-radius: 5px;
+  border: 1px solid gray;
+  background-color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.formularz input[type="submit"]:hover {
+  background-color: rgb(47, 114, 208);
+  border: 1px solid rgb(38, 90, 165);
+  color: white;
+}
+
+.formularz input:focus,
+.formularz textarea:focus,
+.formularz select:focus {
+  transition: 0.3s;
+  outline: none;
+  border: 1px solid rgb(47, 114, 208);
+  box-shadow: 0 0 3px rgba(37, 99, 235, 0.8);
+}
+
+.form-row {
+  display: flex;
+  gap: 10px;
+  width: 100%;
+}
+
+.form-row > div {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Responsywność */
+@media (max-width: 600px) {
+  .formularz {
+    width: 100%;
+  }
+
+  .form-row {
+    flex-direction: column; /* Imię i email pod sobą */
+  }
+
+  .form-row > div {
+    width: 100%;
+  }
+
+  .formularz input,
+  .formularz select,
+  .formularz textarea {
+    width: 100%;
+  }
+}
+
+.formularz span.err {
+  padding-left: 4px;
+  color: red;
+  font-size: 12px;
+  font-weight: normal;
+  position: absolute;
+  bottom: -15px;
+}
+
+.formularz input.err,
+.formularz textarea.err {
+  border: 1px solid red;
+}
+
+.formularz .form-group {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  margin-bottom: 20px;
+}
