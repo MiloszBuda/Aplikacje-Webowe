@@ -100,14 +100,13 @@
   flex-direction: column;
 }
 
-/* Responsywność */
 @media (max-width: 600px) {
   .formularz {
     width: 100%;
   }
 
   .form-row {
-    flex-direction: column; /* Imię i email pod sobą */
+    flex-direction: column;
   }
 
   .form-row > div {
