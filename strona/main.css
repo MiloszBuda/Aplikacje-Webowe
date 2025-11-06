@@ -15,8 +15,9 @@ body {
 
 .head {
   display: flex;
-  flex-flow: row wrap;
+  flex-flow: row nowrap;
   justify-content: space-between;
+  min-width: fit-content;
 
   background-color: rgb(73, 73, 73);
   background: linear-gradient(
@@ -47,7 +48,7 @@ body {
 
 nav {
   display: flex;
-  flex-flow: row wrap;
+  flex-flow: row nowrap;
   justify-content: flex-end;
   align-items: flex-end;
 }
